@@ -20,11 +20,7 @@ import { Spacer } from '@/components/Spacer';
 import { styled } from 'styled-components';
 import { CrossButton } from '@/components/CrossButton';
 import { keyframes } from 'styled-components';
-import type {
-  FlyoutProps,
-  FlyoutTriggerProps,
-  FlyoutContentProps,
-} from './Flyout.types';
+import type { FlyoutProps, FlyoutTriggerProps, FlyoutContentProps } from './Flyout.types';
 
 export type { FlyoutProps };
 

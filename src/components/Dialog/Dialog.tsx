@@ -18,11 +18,7 @@ const Trigger = styled(RadixDialog.Trigger)`
   cursor: pointer;
 `;
 
-const DialogTrigger = ({
-  children,
-  asChild,
-  ...props
-}: DialogTriggerProps) => {
+const DialogTrigger = ({ children, asChild, ...props }: DialogTriggerProps) => {
   if (asChild) {
     // Pass all props to RadixDialog.Trigger, no styled wrapper
     return (

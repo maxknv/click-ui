@@ -112,7 +112,11 @@ export type { DateRange } from './components/DatePicker/utils';
 
 // Dialog
 export { Dialog } from './components/Dialog';
-export type { DialogContentProps, DialogProps, DialogTriggerProps } from './components/Dialog';
+export type {
+  DialogContentProps,
+  DialogProps,
+  DialogTriggerProps,
+} from './components/Dialog';
 
 // Dropdown
 export { Dropdown } from './components/Dropdown';
