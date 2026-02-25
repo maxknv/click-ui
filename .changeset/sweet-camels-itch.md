@@ -6,16 +6,6 @@ Introduces click-ui's own `DialogProps` and `DialogTriggerProps` types, replacin
 
 **What's new:**
 - `DialogProps`, `DialogTriggerProps` - click-ui's own types with the same API you're used to
-- `FlyoutContentProps`, `FlyoutTriggerProps` - for advanced use cases (e.g., creating typed wrapper components)
-
-**Example**
-
-```tsx
-import { Flyout, FlyoutContentProps, FlyoutTriggerProps } from '@clickhouse/click-ui';
-
-const MyTrigger = (props: FlyoutTriggerProps) => <Flyout.Trigger {...props} />;
-const MyContent = (props: FlyoutContentProps) => <Flyout.Content {...props} />;
-```
 
 **How to migrate?**
 

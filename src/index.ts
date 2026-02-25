@@ -128,11 +128,9 @@ export type { FileTabStatusType } from './components/FileTabs';
 // Flyout
 export { Flyout } from './components/Flyout';
 export type {
-  FlyoutContentProps,
   FlyoutFooterProps,
   FlyoutHeaderProps,
   FlyoutProps,
-  FlyoutTriggerProps,
 } from './components/Flyout';
 
 // Form Container
