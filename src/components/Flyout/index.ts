@@ -1,7 +1,8 @@
 export { Flyout } from './Flyout';
 export type {
   FlyoutProps,
-  DialogContentProps,
+  FlyoutTriggerProps,
+  FlyoutContentProps,
   FlyoutHeaderProps,
   FlyoutFooterProps,
 } from './Flyout.types';

@@ -6,11 +6,8 @@ import {
   DialogDescription,
   DialogOverlay,
   DialogPortal,
-  DialogProps,
   DialogTitle,
   DialogTrigger,
-  DialogTriggerProps,
-  DialogContentProps as RadixDialogContentProps,
 } from '@radix-ui/react-dialog';
 import { Button } from '@/components/Button';
 import type { ButtonProps } from '@/components/Button';
@@ -23,8 +20,13 @@ import { Spacer } from '@/components/Spacer';
 import { styled } from 'styled-components';
 import { CrossButton } from '@/components/CrossButton';
 import { keyframes } from 'styled-components';
+import type {
+  FlyoutProps,
+  FlyoutTriggerProps,
+  FlyoutContentProps,
+} from './Flyout.types';
 
-export type FlyoutProps = DialogProps;
+export type { FlyoutProps };
 
 export const Flyout = ({ modal = false, ...props }: FlyoutProps) => {
   return (
@@ -35,13 +37,10 @@ export const Flyout = ({ modal = false, ...props }: FlyoutProps) => {
   );
 };
 
-const Trigger = ({ children, ...props }: DialogTriggerProps) => {
+const Trigger = ({ children, ...props }: FlyoutTriggerProps) => {
   return (
-    <DialogTrigger
-      asChild
-      {...props}
-    >
-      <div>{children}</div>
+    <DialogTrigger asChild>
+      <div {...props}>{children}</div>
     </DialogTrigger>
   );
 };
@@ -51,26 +50,7 @@ Flyout.Trigger = Trigger;
 type FlyoutSizeType = 'default' | 'narrow' | 'wide' | 'widest';
 type Strategy = 'relative' | 'absolute' | 'fixed';
 type FlyoutType = 'default' | 'inline';
-
 type DialogContentAlignmentType = 'start' | 'end';
-export interface DialogContentProps extends RadixDialogContentProps {
-  /** Container element to portal the flyout into */
-  container?: HTMLElement | null;
-  /** Whether to show the overlay backdrop */
-  showOverlay?: boolean;
-  /** The size variant of the flyout */
-  size?: FlyoutSizeType;
-  /** The type of flyout styling */
-  type?: FlyoutType;
-  /** CSS position strategy */
-  strategy?: Strategy;
-  /** Whether clicking outside closes the flyout */
-  closeOnInteractOutside?: boolean;
-  /** Custom width for the flyout */
-  width?: string;
-  /** Alignment of the flyout (start = left, end = right) */
-  align?: DialogContentAlignmentType;
-}
 
 const animationWidth = () =>
   keyframes({
@@ -156,7 +136,7 @@ const Content = ({
   align = 'end',
   onInteractOutside,
   ...props
-}: DialogContentProps) => {
+}: FlyoutContentProps) => {
   return (
     <DialogPortal container={container}>
       {showOverlay && <DialogOverlay className="DialogOverlay" />}

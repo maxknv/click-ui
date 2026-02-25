@@ -4,9 +4,9 @@ import { Button, ButtonProps } from '@/components/Button';
 import { Icon } from '@/components/Icon';
 import { Spacer } from '@/components/Spacer';
 import { CrossButton } from '@/components/CrossButton';
-import { DialogContentProps } from './Dialog.types';
+import { DialogContentProps, DialogProps, DialogTriggerProps } from './Dialog.types';
 
-export const Dialog = ({ children, ...props }: RadixDialog.DialogProps) => {
+export const Dialog = ({ children, ...props }: DialogProps) => {
   return <RadixDialog.Root {...props}>{children}</RadixDialog.Root>;
 };
 
@@ -22,7 +22,7 @@ const DialogTrigger = ({
   children,
   asChild,
   ...props
-}: RadixDialog.DialogTriggerProps) => {
+}: DialogTriggerProps) => {
   if (asChild) {
     // Pass all props to RadixDialog.Trigger, no styled wrapper
     return (
