@@ -112,7 +112,7 @@ export type { DateRange } from './components/DatePicker/utils';
 
 // Dialog
 export { Dialog } from './components/Dialog';
-export type { DialogContentProps } from './components/Dialog';
+export type { DialogContentProps, DialogProps, DialogTriggerProps } from './components/Dialog';
 
 // Dropdown
 export { Dropdown } from './components/Dropdown';
@@ -128,9 +128,11 @@ export type { FileTabStatusType } from './components/FileTabs';
 // Flyout
 export { Flyout } from './components/Flyout';
 export type {
+  FlyoutContentProps,
   FlyoutFooterProps,
   FlyoutHeaderProps,
   FlyoutProps,
+  FlyoutTriggerProps,
 } from './components/Flyout';
 
 // Form Container
@@ -153,10 +155,7 @@ export type { ImageName as IconName } from './components/Icon/Icon.types';
 // Label & Link
 export { Label } from './components/Label';
 export { Link } from './components/Link';
-// TODO: This linkStyles require investigation
-export { linkStyles } from './components/Link/common';
 export type { LabelProps } from './components/Label';
-export type { StyledLinkProps } from './components/Link/common';
 
 // Multi Accordion
 export { MultiAccordion } from './components/MultiAccordion';
@@ -287,14 +286,54 @@ export {
 
 export type { HorizontalDirection, Orientation, States, AssetSize } from './types';
 
-// TODO: These should NOT be exposed
-// prefer click ui props instead
-
 // ================================================
-// Radix UI Types
+// Deprecated Exports
+// These exports are deprecated and will be removed in a future version.
+// They are kept here temporarily for backward compatibility.
 // ================================================
 
+/**
+ * @deprecated Use the `Link` component with the `component` prop instead.
+ * Example: `<Link component={RouterLink} size="md" weight="normal" to="/path">text</Link>`
+ */
+export { linkStyles } from './components/Link/common';
+
+/**
+ * @deprecated Use the `Link` component with the `component` prop instead.
+ * This type exposes internal styled-components implementation details.
+ * Example: `<Link component={RouterLink} size="md" weight="normal" to="/path">text</Link>`
+ */
+export type { StyledLinkProps } from './components/Link/common';
+
+// Radix UI Types (Deprecated)
+// These re-export third-party types directly. Use click-ui's own types instead.
+
+/**
+ * @deprecated Import from '@radix-ui/react-context-menu' directly if needed.
+ * Consider using click-ui's ContextMenu component API instead.
+ */
 export type { ContextMenuProps } from '@radix-ui/react-context-menu';
-export type { DialogProps, DialogTriggerProps } from '@radix-ui/react-dialog';
+
+/**
+ * @deprecated Use click-ui's DialogProps from './components/Dialog' instead.
+ * This re-export will be removed in a future version.
+ */
+export type { DialogProps as RadixDialogProps } from '@radix-ui/react-dialog';
+
+/**
+ * @deprecated Use click-ui's DialogTriggerProps from './components/Dialog' instead.
+ * This re-export will be removed in a future version.
+ */
+export type { DialogTriggerProps as RadixDialogTriggerProps } from '@radix-ui/react-dialog';
+
+/**
+ * @deprecated Import from '@radix-ui/react-hover-card' directly if needed.
+ * Consider using click-ui's HoverCard component API instead.
+ */
 export type { HoverCardProps } from '@radix-ui/react-hover-card';
+
+/**
+ * @deprecated Import from '@radix-ui/react-popover' directly if needed.
+ * Consider using click-ui's Popover component API instead.
+ */
 export type { PopoverProps } from '@radix-ui/react-popover';

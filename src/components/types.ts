@@ -1,3 +1,5 @@
+// TODO: This can now be removed?
+
 import { TooltipProps } from './Tooltip';
 import { TitleProps } from './Typography/Title/Title';
 import { TextProps } from './Typography/Text/Text';
@@ -35,8 +37,7 @@ export type { MultiSelectProps } from './Select/MultiSelect';
 export type { CheckboxMultiSelectProps } from './Select/CheckboxMultiSelect';
 export type { PanelProps } from './Panel';
 export type { FlyoutProps, FlyoutFooterProps, FlyoutHeaderProps } from './Flyout';
-export type { DialogContentProps } from './Dialog';
-export type { DialogProps, DialogTriggerProps } from '@radix-ui/react-dialog';
+export type { DialogContentProps, DialogProps, DialogTriggerProps } from './Dialog';
 export type { ConfirmationDialogProps } from './ConfirmationDialog';
 export type { FileTabStatusType } from './FileTabs';
 export type {
@@ -61,7 +62,6 @@ export type {
   GridContextMenuItemProps,
   Rectangle,
 } from './Grid/types';
-export type { StyledLinkProps } from './Link/common';
 
 export type { DateRange } from './DatePicker/utils';
 
