@@ -1,5 +1,6 @@
 import lightTheme from './tokens/variables.light';
 
+// TODO: This is not a type, should be moved to theme.core.ts
 export const THEMES = {
   Dark: 'dark',
   Light: 'light',
