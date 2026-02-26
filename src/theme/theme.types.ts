@@ -1,14 +1,9 @@
 import lightTheme from './tokens/variables.light';
-
-// TODO: This is not a type, should be moved to theme.core.ts
-export const THEMES = {
-  Dark: 'dark',
-  Light: 'light',
-} as const;
-
-export type ThemeName = (typeof THEMES)[keyof typeof THEMES];
+import { THEMES } from './theme.core';
 
 export type Theme = typeof lightTheme;
+
+export type ThemeName = (typeof THEMES)[keyof typeof THEMES];
 
 declare module 'styled-components' {
   export interface DefaultTheme extends Theme {}
