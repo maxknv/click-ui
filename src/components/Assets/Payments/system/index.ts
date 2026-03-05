@@ -1,8 +1,4 @@
-export {
-  Payment,
-  type PaymentProps,
-  resolvePaymentName,
-} from './Payment';
+export { Payment, type PaymentProps, resolvePaymentName } from './Payment';
 export { default as PaymentsLight } from './PaymentsLight';
 export { default as PaymentsDark } from './PaymentsDark';
 export type { PaymentName } from './types';
